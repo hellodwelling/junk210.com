@@ -40,7 +40,7 @@
 
 
 <div class = "flex w-full flex-col">  
-    <div  class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
   <div x-data="{ open: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
     <div class="py-4 flex flex-row items-center justify-between">
         
@@ -53,7 +53,8 @@
         </svg>
       </button>
     </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:justify-end lg:flex-row">
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex  lg:flex-row  lg:justify-end ">
+    
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
@@ -86,16 +87,16 @@
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
     href="#find-us">Service Areas
 </a>
-     
+   
+    
+  
 
-      
-         <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"x-data="{open: false}">
-        
-            <a target = "_blank"  x-on:click.prevent="open = true" class="" href="">Send us a Text</a>
-      
 
-              
-        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    
+      <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"x-data="{open: false}">
+      
+          <a target = "_blank"  x-on:click.prevent="open = true" class="" href="">Send us a Text</a>
+            <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
     <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
             <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
         <div class="block mb-4 border border-gray-200 rounded-lg">
@@ -124,6 +125,9 @@
 
     </form>
 </div>
+           
+      
+        
     </nav>
   </div>
 </div>
@@ -141,21 +145,32 @@ class="flex relative flex-col w-full  bg-gray-900 text-white  lg:flex-row lg:fle
             
             <h2 class="py-5 mb-5 lg:text-xl text-center lg:text-left">
             </h2>
-            <div id="cover-button">
-                 
-            <div id="" class="flex text-center justify-center items-center z-50" x-data="{open: false}">
+            
+            <div class="flex flex-col lg:flex-row flex-grow flex-col space-y-5 md:space-y-0 w-full lg:w-auto md:space-y-5 lg:space-y-0">
+                <div class=" w-full lg:w-auto">
                 
+  
+                </div>
+
+                <div id="cover-button" class="w-full lg:w-auto ">
+                    
+ 
+    <div id="" class="flex text-center justify-center items-center z-50 w-full lg:w-auto " x-data="{open: false}">
+        
 <button 
  
     onMouseOver="this.style.backgroundColor='white'; this.style.color='#002868' "
     onMouseOut="this.style.backgroundColor='#BF0A30'; this.style.color='white'"
     style="background-color:#BF0A30; color:white"               
 
- id="" type="button" x-on:click.prevent="open = true" class=" inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900">
+ id="" type="button" x-on:click.prevent="open = true" class=" 
+  w-full lg:w-auto 
+
+    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900">
     <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
 </button>
 
-                <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
     <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
             <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
         <div class="block mb-4 border border-gray-200 rounded-lg">
@@ -184,26 +199,29 @@ class="flex relative flex-col w-full  bg-gray-900 text-white  lg:flex-row lg:fle
 
     </form>
 </div>
-
-            </div>
+    </div>
  
-            </div>
+                </div>
 
-            <div >
-                 
-            <div id="" class="flex text-center justify-center items-center z-50" x-data="{open: false}">
-                
+                <div>
+                    
+ 
+    <div id="" class="flex text-center justify-center items-center z-50 w-full lg:w-auto " x-data="{open: false}">
+        
 <button 
  
     onMouseOver="this.style.backgroundColor='white'; this.style.color='#002868' "
     onMouseOut="this.style.backgroundColor='#BF0A30'; this.style.color='white'"
     style="background-color:#BF0A30; color:white"               
 
- id="side-button" type="button" x-on:click.prevent="open = true" class="mb-3 fixed bottom-0 -right-80 z-10 mr-3 md:mr-0 z-50 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900">
+ id="side-button" type="button" x-on:click.prevent="open = true" class=" 
+  
+
+   mb-3 fixed bottom-0 -right-80 z-10 mr-3 lg:mr-0 z-50 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900">
     <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
 </button>
 
-                <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
     <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
             <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
         <div class="block mb-4 border border-gray-200 rounded-lg">
@@ -232,8 +250,9 @@ class="flex relative flex-col w-full  bg-gray-900 text-white  lg:flex-row lg:fle
 
     </form>
 </div>
+    </div>
 
-            </div>
+                </div>
 
             </div>
         </div>
@@ -350,8 +369,9 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     </section>
     
     
+    
     <section  style= "background-color:#002868"   id= "services" class="lg:mt-0 relative w-full px-8 font-sans leading-6  bg-gray-900 border-0 border-gray-200 text-white border-solid ">
-        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24">
+        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24 ">
             
             <h2 class="mb-3 lg:pr-9 text-3xl mx-auto font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center">
                 Our Services
@@ -434,55 +454,109 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     </section>
     
     
-        <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden  bg-white text-gray-900   md:pt-20 xl:pt-20 xl:pb-20">
+    
+
+        <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden   bg-white text-gray-900   md:pt-20 xl:pt-20 xl:pb-20">
             <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
                 <h2  style= "color:#002868" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
                 <h2  style= "color:#BF0A30" class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
-                <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/H0AH7M4LABCSJEMCVZYTTB7RHG52H1KD6O3EWEYL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/90LGU2RJ4E98UGVUPNM2UDU9XJB7KCRX1XJRYO0H.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/SNM0SK9DWRQQ86ID96E9EB3L2DSH5V3ZG1Z2UOKB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/9U8D1B6VQIN6CGA24PERCAMMEZCF3YTERDJ206R2.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/E3JNAV0XFF5PSBMVDLDRGQY62D3S0L2A599VD5W2.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CCAY09M8I8K4SEAATMHTET3C8RZE2YQ5G8B18PNH.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/NIDZ5OM7WG21M8TKW5T7Y6LB8C4TFDR2YOIJD1C9.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/TNS91MGVJP7GL05X0IT4EGP6ND1NHGR9J4J0H56L.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/TBO17L9OUEXDEIQ0KMOTWU4PAZJ86Z1ZD776FT36.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [     [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/Y7L0P6LB6L9HJ36SORK3YCRE19437DGEZMEN3ZZX.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/QDP9HRKQX852VUA0SJHNLF5YLA7ZNKPTNBQFCVL1.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/6AR1OLQE0SXNMNACPSRS1RSS0APDQGJCUDXA3FSN.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/4EWIY9M0W5CC1PTLKD1G1R066CXIESS7LXDJ3XQH.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/BZR9DD6TUYBGU394A46XVLBZH90E9W85ECHF0YZ5.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/9Y94RT9IK9X4SUV9377TKN5GO7D4JY8FZVV4FHNB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/Z09KBMNJFM8119FALD50SF1VCSVBV0RMTABE3AB3.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/X6MOFG8RKFT0AT7QATPKNKRSJVEQ107FR9QJ8XI3.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/5CAZ9NFHTE5LJWDYDT04LUTDUOMVTZ3H2ZFH74XS.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/H0AH7M4LABCSJEMCVZYTTB7RHG52H1KD6O3EWEYL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/90LGU2RJ4E98UGVUPNM2UDU9XJB7KCRX1XJRYO0H.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/SNM0SK9DWRQQ86ID96E9EB3L2DSH5V3ZG1Z2UOKB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/9U8D1B6VQIN6CGA24PERCAMMEZCF3YTERDJ206R2.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/E3JNAV0XFF5PSBMVDLDRGQY62D3S0L2A599VD5W2.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CCAY09M8I8K4SEAATMHTET3C8RZE2YQ5G8B18PNH.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/NIDZ5OM7WG21M8TKW5T7Y6LB8C4TFDR2YOIJD1C9.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/TNS91MGVJP7GL05X0IT4EGP6ND1NHGR9J4J0H56L.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/TBO17L9OUEXDEIQ0KMOTWU4PAZJ86Z1ZD776FT36.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
                                         
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/H0AH7M4LABCSJEMCVZYTTB7RHG52H1KD6O3EWEYL.jpeg"  alt = "Photo number 1 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
+                                <video class="rounded shadow-md object-cover w-full h-60" loading="lazy" controls> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/MWG17FWRDXM56CCP963ZUUPZ91RU0F0L7XW3QADN.quicktime" >
+                                </video>
+                            </div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/90LGU2RJ4E98UGVUPNM2UDU9XJB7KCRX1XJRYO0H.jpeg"  alt = "Photo number 2 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Y7L0P6LB6L9HJ36SORK3YCRE19437DGEZMEN3ZZX.jpeg"  alt = "Photo number 2 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNM0SK9DWRQQ86ID96E9EB3L2DSH5V3ZG1Z2UOKB.jpeg"  alt = "Photo number 3 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/QDP9HRKQX852VUA0SJHNLF5YLA7ZNKPTNBQFCVL1.jpeg"  alt = "Photo number 3 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9U8D1B6VQIN6CGA24PERCAMMEZCF3YTERDJ206R2.jpeg"  alt = "Photo number 4 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/6AR1OLQE0SXNMNACPSRS1RSS0APDQGJCUDXA3FSN.jpeg"  alt = "Photo number 4 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/E3JNAV0XFF5PSBMVDLDRGQY62D3S0L2A599VD5W2.jpeg"  alt = "Photo number 5 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4EWIY9M0W5CC1PTLKD1G1R066CXIESS7LXDJ3XQH.jpeg"  alt = "Photo number 5 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CCAY09M8I8K4SEAATMHTET3C8RZE2YQ5G8B18PNH.jpeg"  alt = "Photo number 6 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/BZR9DD6TUYBGU394A46XVLBZH90E9W85ECHF0YZ5.jpeg"  alt = "Photo number 6 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/NIDZ5OM7WG21M8TKW5T7Y6LB8C4TFDR2YOIJD1C9.jpeg"  alt = "Photo number 7 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9Y94RT9IK9X4SUV9377TKN5GO7D4JY8FZVV4FHNB.jpeg"  alt = "Photo number 7 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TNS91MGVJP7GL05X0IT4EGP6ND1NHGR9J4J0H56L.jpeg"  alt = "Photo number 8 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Z09KBMNJFM8119FALD50SF1VCSVBV0RMTABE3AB3.jpeg"  alt = "Photo number 8 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                                         
                             
                                   
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TBO17L9OUEXDEIQ0KMOTWU4PAZJ86Z1ZD776FT36.jpeg"  alt = "Photo number 9 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/X6MOFG8RKFT0AT7QATPKNKRSJVEQ107FR9QJ8XI3.jpeg"  alt = "Photo number 9 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5CAZ9NFHTE5LJWDYDT04LUTDUOMVTZ3H2ZFH74XS.jpeg"  alt = "Photo number 10 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/H0AH7M4LABCSJEMCVZYTTB7RHG52H1KD6O3EWEYL.jpeg"  alt = "Photo number 11 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/90LGU2RJ4E98UGVUPNM2UDU9XJB7KCRX1XJRYO0H.jpeg"  alt = "Photo number 12 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNM0SK9DWRQQ86ID96E9EB3L2DSH5V3ZG1Z2UOKB.jpeg"  alt = "Photo number 13 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9U8D1B6VQIN6CGA24PERCAMMEZCF3YTERDJ206R2.jpeg"  alt = "Photo number 14 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/E3JNAV0XFF5PSBMVDLDRGQY62D3S0L2A599VD5W2.jpeg"  alt = "Photo number 15 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 15; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CCAY09M8I8K4SEAATMHTET3C8RZE2YQ5G8B18PNH.jpeg"  alt = "Photo number 16 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 16; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/NIDZ5OM7WG21M8TKW5T7Y6LB8C4TFDR2YOIJD1C9.jpeg"  alt = "Photo number 17 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 17; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TNS91MGVJP7GL05X0IT4EGP6ND1NHGR9J4J0H56L.jpeg"  alt = "Photo number 18 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
+                        
+                                        
+                            
+                                  
+                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 18; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TBO17L9OUEXDEIQ0KMOTWU4PAZJ86Z1ZD776FT36.jpeg"  alt = "Photo number 19 of Junk Today Gone Tomorrow&#x27;s best work performing a null job"   loading="lazy" ></div>
                         
                      
                                         
